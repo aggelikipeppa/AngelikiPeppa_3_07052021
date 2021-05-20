@@ -87,7 +87,7 @@ main {
 }
 
 .hero_button {
-    background-color: $primary;
+    background-color: $color-primary;
     color: white;
     width: 220px;
     height: 50px;
@@ -99,6 +99,10 @@ main {
     span {
         font-size: 1.1em;
         padding: 10px;
+    }
+
+    & :hover {
+        cursor: pointer;
     }
 }
 
