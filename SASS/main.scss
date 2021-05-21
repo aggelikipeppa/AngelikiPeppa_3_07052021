@@ -7,13 +7,12 @@ $color-tertiary: #99E2D0;
 body {
    font-family: $font_text;
    margin: 0px;
-   background-color: #f6f6f6; 
+   background-color: white;
 }
 
 * a {
     text-decoration: none;
 }
-
 
 .header {
     box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
@@ -39,6 +38,11 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: white;
+}
+
+.location_and_hero {
+    width: 100%;
 }
 
 .location {
@@ -54,57 +58,138 @@ main {
     .location_text {
         margin-left: 13px;
         font-weight: 400;
+        color: #7E7E7E;
     }
 }
 
 .hero {
     width: 100%;
     background-color: #fafafa;
+    
+    .hero_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 50px 0;
+
+        .hero_title {
+            text-align: center;
+            max-width: 250px;
+            margin: 0;
+            font-size: 1.5em;
+            font-weight: bold;
+            }
+
+        .hero_text {
+            text-align: center;
+            max-width: 350px;
+            padding: 25px 20px 35px 20px;
+            font-size: 1.1em;
+            }
+        
+        .hero_button {
+            background-image: linear-gradient(to bottom right, $color-secondary,$color-primary);
+            color: white;
+            width: 220px;
+            height: 50px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50px;
+            border: none;
+                
+            span {
+                font-size: 1.1em;
+                padding: 10px;
+            }
+                
+            & :hover {
+                cursor: pointer;
+            }
+        }
+    }
 }
 
-.hero_container {
+.fonctionnement {
+    background-color: white;
+    width: 100%;
+    padding: 25px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .fonction_container {
+        width: 95%;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        
+        .fonction_title {
+            margin-bottom: 30px;
+        }
+
+        .fonction_steps {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            & :hover {
+                cursor: pointer;
+            }
+        
+            .fonction_btn {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 325px;
+                height: 70px;
+                margin: 10px 20px;
+                border-radius: 20px;
+                background-color: #f6f6f6;
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+
+                .fonction_number {
+                    background-color: $color-primary;
+                    color: white;
+                    position: absolute;
+                    padding: 3px 8px 3px 8px;
+                    border-radius: 500px;
+                    transform: translateX(-50%);
+                }
+
+                .fonction_icon {
+                    color: #7E7E7E;
+                    margin: 0 20px;
+                }
+            }
+        }
+    }
+}
+
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #f6f6f6;
+}
+
+.restau_img img {
     width: 100%;
-    padding: 50px 0;
-
-    .hero_title {
-        text-align: center;
-        max-width: 250px;
-        margin: 0;
-        font-size: 1.5em;
-        font-weight: bold;
-    }
-
-    .hero_text {
-        text-align: center;
-        max-width: 350px;
-        padding: 25px 20px 35px 20px;
-        font-size: 1.1em;
-    }
+    height: 190px;
 }
 
-.hero_button {
-    background-color: $color-primary;
-    color: white;
-    width: 220px;
-    height: 50px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50px;
-    border: none;
 
-    span {
-        font-size: 1.1em;
-        padding: 10px;
-    }
+        
+    
 
-    & :hover {
-        cursor: pointer;
-    }
-}
+ 
+
+
+
+
 
 
 
