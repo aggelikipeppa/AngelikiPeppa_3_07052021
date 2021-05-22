@@ -6,6 +6,7 @@ body {
 
 * a {
   text-decoration: none;
+  color: white;
 }
 
 .header {
@@ -100,7 +101,6 @@ main {
 .fonctionnement {
   background-color: white;
   width: 100%;
-  padding: 25px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,12 +108,12 @@ main {
 }
 .fonctionnement .fonction_container {
   width: 95%;
-  padding: 0px;
   display: flex;
   flex-direction: column;
 }
 .fonctionnement .fonction_container .fonction_title {
   margin-bottom: 30px;
+  padding: 20px;
 }
 .fonctionnement .fonction_container .fonction_steps {
   display: flex;
@@ -148,17 +148,109 @@ main {
 }
 
 .restaurants {
+  background-color: #f6f6f6;
+  width: 100%;
+}
+.restaurants .restau_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: #f6f6f6;
-  width: 100%;
+  padding: 20px;
+}
+.restaurants .restau_container .restau_cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.restau_img img {
+.restau_card {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  max-width: 335px;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.restau_card .restau_img {
   width: 100%;
   height: 190px;
+}
+.restau_card .restau_img .restau__card_new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99e2d0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.restau_card .restau_img .restau__card_new p {
+  color: green;
+  padding: 10px 20px;
+  margin: 0px;
+}
+.restau_card .restau_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.restau_bloc {
+  background-color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.restau_bloc .restau_infos {
+  color: black;
+  line-height: 50%;
+}
+
+footer {
+  width: 100%;
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+footer .footer_bloc {
+  display: inline;
+  padding: 0 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+footer .footer_bloc .logo {
+  font-family: "Shrikhand";
+  font-size: 20px;
+  padding: 15px 0;
+  color: white;
+}
+footer .footer_bloc .footer_links {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+footer .footer_bloc .footer_links .footer_link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  color: white;
+  height: 30px;
+}
+footer .footer_bloc .footer_links .footer_link i {
+  margin-right: 7px;
+  font-size: 0.9em;
 }
 
 /*# sourceMappingURL=style.css.map */
