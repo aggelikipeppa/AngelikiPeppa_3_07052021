@@ -242,6 +242,7 @@ main {
       -ms-flex-align: start;
           align-items: flex-start;
   background-color: #f6f6f6;
+  width: 100%;
 }
 
 .restau_img img {
