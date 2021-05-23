@@ -117,11 +117,6 @@ main {
                 font-size: 1.1em;
                 padding: 10px;
             }
-                
-            & :hover {
-                @include button-hover;
-                
-            }
         }
     }
 }
