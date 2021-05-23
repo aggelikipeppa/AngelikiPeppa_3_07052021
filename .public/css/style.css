@@ -93,14 +93,9 @@ main {
   display: inline-block;
   text-align: center;
 }
-.hero .hero_container .hero_button span {
+.hero .hero_container .hero_button p {
   font-size: 1.1em;
   padding: 10px;
-}
-.hero .hero_container .hero_button :hover {
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
 }
 
 .fonctionnement {
@@ -219,6 +214,9 @@ main {
   color: black;
   line-height: 50%;
 }
+.restau_bloc .restau_btn {
+  color: black;
+}
 
 footer {
   width: 100%;
@@ -234,7 +232,7 @@ footer .footer_bloc {
   width: 100%;
   max-width: 1200px;
 }
-footer .footer_bloc .logo {
+footer .footer_bloc .footer_logo {
   font-family: "Shrikhand";
   font-size: 20px;
   padding: 15px 0;
