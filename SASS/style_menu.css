@@ -115,7 +115,6 @@ section .menu .menu_title h2 {
 }
 .menu_container_button .menu_button {
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  opacity: 1;
   color: white;
   padding: 0px 20px;
   margin: 50px 0px;
@@ -126,6 +125,14 @@ section .menu .menu_title h2 {
   text-align: center;
   display: inline-block;
   font-size: 1em;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
+}
+.menu_container_button .menu_button:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+  opacity: 0.8;
 }
 
 footer {
