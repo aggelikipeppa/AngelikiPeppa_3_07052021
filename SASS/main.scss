@@ -20,10 +20,10 @@
 }
 
 @mixin button-hover {
-        cursor: pointer;
-        transform: scale(1.15);
-        opacity: 0.5;
-    }
+    cursor: pointer;
+    transform: scale(1.15);
+    opacity: 0.5;
+}
 
 
 $font_title: 'Shrikhand';
@@ -198,7 +198,6 @@ main {
             &:hover {
                 @include button-hover;
             }
-
         }
     }
 }
