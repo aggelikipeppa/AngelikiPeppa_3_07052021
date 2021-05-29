@@ -4,6 +4,27 @@
     align-items: center;
 }
 
+@mixin button-style {
+    background-image: $gradient;
+    color: white;
+    border-radius: 200px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    text-align: center;
+    display:inline-block;
+    font-size: 1em;
+    padding: 0px 20px;
+    margin: 50px 0px;
+    transform: scale(1);
+    transition: transform 400ms;
+    opacity: 1;
+}
+
+@mixin button-hover {
+        cursor: pointer;
+        transform: scale(1.15);
+        opacity: 0.5;
+    }
+
 
 
 $font_title: 'Shrikhand';
@@ -135,25 +156,12 @@ section {
     width: 100%;
 
     .menu_button {
-        background-image: $gradient;
-        color: white;
-        padding: 0px 20px;
-        margin: 50px 0px;
-        border-radius: 200px;
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+        @include button-style;
         width: 150px;
         height: 50px;
-        text-align: center;
-        display:inline-block;
-        font-size: 1em;
-        transform: scale(1);
-        transition-property: transform;
-        transition-duration: 400ms;
 
         &:hover {
-            cursor: pointer;
-            transform: scale(1.15);
-            opacity: 0.8;
+            @include button-hover;
         }
     }
 }

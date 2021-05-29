@@ -4,29 +4,94 @@ body {
   background-color: white;
 }
 
+.loading {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  margin: auto;
+  position: fixed;
+  z-index: 20;
+  opacity: 0.7;
+  line-height: 500px;
+  visibility: hidden;
+  animation: loading 2s linear;
+}
+
+.loader {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.loader-quart {
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color: #9356DC;
+  border-bottom-color: #FF79DA;
+  animation: spinner 1s linear infinite;
+}
+.loader-quart:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  right: 5px;
+  left: 5px;
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color: #99E2D0;
+  border-bottom-color: #99E2D0;
+  opacity: 0.6;
+  animation: spinreverse 2s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    visibility: visible;
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinreverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 * a {
   text-decoration: none;
   color: white;
 }
 
 .header {
-  -webkit-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 80px;
   background-color: white;
 }
-
 .header .header_logo {
   font-family: "Shrikhand";
   color: black;
@@ -36,19 +101,10 @@ body {
 main {
   margin: 0px;
   padding: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: white;
 }
 
@@ -59,23 +115,13 @@ main {
 .location {
   color: #3d3636;
   background-color: #f3f3f3;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   width: 100%;
   height: 50px;
 }
-
 .location .location_text {
   margin-left: 13px;
   font-weight: 400;
@@ -86,25 +132,14 @@ main {
   width: 100%;
   background-color: #fafafa;
 }
-
 .hero .hero_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
   padding: 50px 0;
 }
-
 .hero .hero_container .hero_title {
   text-align: center;
   max-width: 250px;
@@ -112,115 +147,82 @@ main {
   font-size: 1.5em;
   font-weight: bold;
 }
-
 .hero .hero_container .hero_text {
   text-align: center;
   max-width: 350px;
   padding: 25px 20px 35px 20px;
   font-size: 1.1em;
 }
-
 .hero .hero_container .hero_button {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  opacity: 1;
-  padding: 0px 20px;
+  color: white;
   border-radius: 200px;
-  border: none;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  display: inline-block;
+  font-size: 1em;
+  padding: 0px 20px;
+  margin: 50px 0px;
+  transform: scale(1);
+  transition: transform 400ms;
+  opacity: 1;
   width: 220px;
   height: 50px;
-  display: inline-block;
-  text-align: center;
 }
-
-.hero .hero_container .hero_button p {
-  font-size: 1.1em;
-  padding: 10px;
+.hero .hero_container .hero_button:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+  opacity: 0.5;
 }
 
 .fonctionnement {
   background-color: white;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 .fonctionnement .fonction_container {
   width: 95%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 .fonctionnement .fonction_container .fonction_title {
   margin-bottom: 30px;
   padding: 20px;
 }
-
 .fonctionnement .fonction_container .fonction_steps {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
-
-.fonctionnement .fonction_container .fonction_steps :hover {
-  cursor: pointer;
-}
-
 .fonctionnement .fonction_container .fonction_steps .fonction_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   width: 325px;
   height: 70px;
   margin: 10px 20px;
   border-radius: 20px;
   background-color: #f6f6f6;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+  transform: scale(1);
+  transition: transform 400ms;
 }
-
+.fonctionnement .fonction_container .fonction_steps .fonction_btn:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+  opacity: 0.5;
+}
 .fonctionnement .fonction_container .fonction_steps .fonction_btn .fonction_number {
   background-color: #9356DC;
   color: white;
   position: absolute;
   padding: 3px 8px 3px 8px;
   border-radius: 500px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
 .fonctionnement .fonction_container .fonction_steps .fonction_btn .fonction_icon {
   color: #7E7E7E;
   margin: 0 20px;
@@ -230,91 +232,59 @@ main {
   background-color: #f6f6f6;
   width: 100%;
 }
-
 .restaurants .restau_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   padding: 20px;
 }
-
 .restaurants .restau_container .restau_cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .restau_card {
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   max-width: 335px;
   margin-bottom: 20px;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+  transform: scale(1);
+  transition: transform 400ms;
 }
-
+.restau_card:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+  opacity: 0.5;
+}
 .restau_card .restau_img {
   width: 100%;
   height: 190px;
 }
-
 .restau_card .restau_img .restau__card_new {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background-color: #99e2d0;
   position: absolute;
   top: 20px;
   right: 20px;
 }
-
 .restau_card .restau_img .restau__card_new p {
   color: green;
   padding: 10px 20px;
   margin: 0px;
 }
-
 .restau_card .restau_img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
 
@@ -322,27 +292,16 @@ main {
   background-color: white;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px;
 }
-
 .restau_bloc .restau_infos {
   color: black;
   line-height: 50%;
 }
-
 .restau_bloc .restau_btn {
   color: black;
 }
@@ -350,62 +309,39 @@ main {
 footer {
   width: 100%;
   background-color: #353535;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   color: white;
 }
-
 footer .footer_bloc {
   display: inline;
   padding: 0 40px;
   width: 100%;
   max-width: 1200px;
 }
-
 footer .footer_bloc .footer_logo {
   font-family: "Shrikhand";
   font-size: 20px;
   padding: 15px 0;
   color: white;
 }
-
 footer .footer_bloc .footer_links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: auto;
 }
-
 footer .footer_bloc .footer_links .footer_link {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   text-align: center;
   color: white;
   height: 30px;
 }
-
 footer .footer_bloc .footer_links .footer_link i {
   margin-right: 7px;
   font-size: 0.9em;
 }
+
 /*# sourceMappingURL=main.css.map */
