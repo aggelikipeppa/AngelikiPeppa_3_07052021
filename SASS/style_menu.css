@@ -32,6 +32,15 @@ header .header_menu {
   background-color: white;
 }
 
+header .header_menu .header__fleche-back {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 35px;
+  top: 40%;
+  font-size: 20px;
+}
+
 header .header_menu .header_logo {
   font-family: "Shrikhand";
   color: black;
@@ -176,13 +185,96 @@ section .menu .menu_title h2 {
 
 .menu_blocs .menu_bloc .menu_bloc_title {
   position: relative;
-  font-weight: 400;
-  text-transform: uppercase;
 }
 
-.menu_dishes_and_prices {
+.menu_blocs .menu_bloc .menu_bloc_title h3 {
+  text-transform: uppercase;
+  font-weight: unset;
+}
+
+.menu_blocs .menu_bloc .menu_bloc_title ::after {
+  content: '';
+  width: 50px;
+  height: 4px;
+  background: #99e2d0;
+  position: absolute;
+  z-index: 20;
+  left: 0px;
+  bottom: 10px;
+}
+
+.oppacity_progressive {
+  -webkit-animation: opacity 1s both;
+          animation: opacity 1s both;
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#box-1 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+#box-2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+#box-3 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+#box-4 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+#box-5 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+#box-6 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+#box-7 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+#box-8 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+#box-9 {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.menu_container {
   position: relative;
   cursor: pointer;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -205,17 +297,26 @@ section .menu .menu_title h2 {
           box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
 
-.menu_dishes_and_prices .menu_dishe {
+.menu_container .menu_dishes_and_prices {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu_container .menu_dishe {
   margin: 10px;
   font-size: 1em;
 }
 
-.menu_dishes_and_prices .menu_dishe .menu_dish_title {
+.menu_container .menu_dishe .menu_dish_title {
   font-weight: bold;
-}
-
-.menu_dishes_and_prices .validation_box {
-  visibility: hidden;
 }
 
 .menu_container_button {
