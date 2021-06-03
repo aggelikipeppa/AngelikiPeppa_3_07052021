@@ -20,10 +20,10 @@
 }
 
 @mixin button-hover {
-        cursor: pointer;
-        transform: scale(1.15);
-        opacity: 0.5;
-    }
+    cursor: pointer;
+    transform: scale(1.15);
+    opacity: 0.5;
+}
 
 
 
@@ -42,8 +42,8 @@ body {
 
 * a {
     text-decoration: none;
-    color: white;
     color: black;
+    
 }
 
 header {
@@ -105,6 +105,45 @@ section {
     }
 }
 
+.heart_button {
+    position:relative;
+    width: 30px;
+
+    .icon_heart {
+        width: 30px;
+
+        path {
+            fill: white;
+            stroke: black;
+            stroke-width: 30px;
+        }
+        
+        & :hover {
+            animation: heart 0.7s linear forwards;
+        }
+    }
+}
+
+@keyframes heart {
+    0% {
+        fill: transparent;
+        stroke: black;
+    }
+
+    50% {
+        fill: url(#gradient_Color);
+        
+        stroke: transparent; 
+    }
+
+
+    100% {
+        fill: url(#gradient_Color);
+        stroke: transparent;
+    }
+}
+
+
 .menu_blocs {
     @include flexbox-center();
     flex-direction: column;
@@ -127,9 +166,9 @@ section {
     cursor: pointer;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
-    width: 100%;
+    width: 350px;
     height: 70px;
     margin-bottom: 15px;
     background-color: white;
@@ -138,16 +177,21 @@ section {
 
 
     .menu_dishe {
-        margin-left: 20px;
-        white-space: nowrap;
-        overflow: hidden;
+        margin: 10px;
+        
         font-size: 1em;
 
         .menu_dish_title {
             font-weight: bold;
         }
     }
+
+    .validation_box {
+        visibility: hidden;
+    }
 }
+
+
 
 .menu_container_button {
     display: flex;
@@ -193,6 +237,7 @@ footer {
             display: flex; 
             flex-direction: column;
             width: auto;
+            color: white;
 
             .footer_link {
                 display: flex;

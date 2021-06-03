@@ -25,13 +25,19 @@
     opacity: 0.5;
 }
 
+$medium: 768px!default;
+$large: 1200px!default;
+
+
+$medium-up: "only screen and (min width: #{$medium})";
+$large-down: "only screen and (max width: #{$large})";
 
 $font_title: 'Shrikhand';
 $font_text: 'Roboto', sans-serif;
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$gradient: linear-gradient(to bottom right, $color-secondary,$color-primary);
+$gradient: linear-gradient(to bottom right, $color-secondary, $color-primary);
 
 body {
    font-family: $font_text;
@@ -222,6 +228,12 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: center;
+
+            @media (min-width:64rem) {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
         
             .fonction_btn {
                 display: flex;
@@ -271,7 +283,7 @@ main {
 
         .restau_cards {
             @include flexbox-center;
-            flex-direction: column;
+            flex-direction: column; 
         }
     }
 }
@@ -287,12 +299,7 @@ main {
     justify-content: center;
     transform: scale(1);
     transition: transform 400ms;
-
-    &:hover {
-        @include button-hover;
-    }
     
-
     .restau_img {
         width: 100%;
         height: 190px;
@@ -321,7 +328,7 @@ main {
 }
 
 .restau_bloc {
-    background-color: white;
+    
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     display: flex;
@@ -335,11 +342,53 @@ main {
         color: black;
         line-height: 50%;
     }
+}
 
-    .restau_btn {
-        color: black;
+.heart_button {
+    position:relative;
+    width: 30px;
+
+    .icon_heart {
+        width: 30px;
+
+        path {
+            fill: white;
+            stroke: black;
+            stroke-width: 30px;
+        }
+        
+        & :hover {
+            animation: heart 0.7s linear forwards;
+        }
     }
 }
+
+@keyframes heart {
+    0% {
+        fill: transparent;
+        stroke: black;
+    }
+
+    50% {
+        fill: url(#gradient_Color);
+        
+        stroke: transparent; 
+    }
+
+
+    100% {
+        fill: url(#gradient_Color);
+        stroke: transparent;
+    }
+}
+
+    
+
+
+  
+
+
+
 
 footer {
     width: 100%;
