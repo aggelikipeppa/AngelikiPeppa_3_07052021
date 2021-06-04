@@ -290,10 +290,18 @@ section {
         .menu_dishe {
             margin: 10px;
             font-size: 1em;
+            margin-left: 20px;
+            white-space: nowrap;
+            overflow: hidden;
     
             .menu_dish_title {
                 font-weight: bold;
             }
+        }
+
+        p {
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
     } 
 }
@@ -301,6 +309,7 @@ section {
 .menu_price {
     font-weight: bold;
     padding-left: 7px;
+    margin-right: 10px;
 }
 
 .validation_box {
