@@ -325,6 +325,12 @@ section .menu .menu_title h2 {
           box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
 
+.menu_container :hover .menu_price {
+  padding-right: 70px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
 .menu_container:hover .validation_box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -361,6 +367,11 @@ section .menu .menu_title h2 {
 
 .menu_container .menu_dishes_and_prices .menu_dishe .menu_dish_title {
   font-weight: bold;
+}
+
+.menu_price {
+  font-weight: bold;
+  padding-left: 7px;
 }
 
 .validation_box {
