@@ -22,10 +22,36 @@
 @mixin button-hover {
     cursor: pointer;
     transform: scale(1.15);
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
+$breakpoints: (
+    tablet: 768px,
+    desktop: 1280px,
+    large: 1600px,
+);
 
+@mixin tablet {
+    @media screen and (min-width:map-get($breakpoints, tablet)){
+      @content;
+    }
+  }
+  @mixin desktop {
+    @media screen and (min-width:map-get($breakpoints, desktop)){
+      @content;
+    }
+  }
+  @mixin large {
+    @media screen and (min-width:map-get($breakpoints, large)){
+      @content;
+    }
+  }
+  
+  @mixin medium-screen {
+    @media screen and (min-width: map-get($breakpoints, medium)) {
+      @content;
+    }
+  }
 
 $font_title: 'Shrikhand';
 $font_text: 'Roboto', sans-serif;
@@ -176,6 +202,10 @@ main {
         width: 100%;
         padding: 50px 0;
 
+        @include desktop() {
+            padding-bottom: 0;
+        }
+
         .hero_title {
             text-align: center;
             max-width: 250px;
@@ -189,7 +219,11 @@ main {
             max-width: 350px;
             padding: 25px 20px 35px 20px;
             font-size: 1.1em;
+            @include desktop() {
+                padding:0;
+                margin-bottom: 0;
             }
+        }
         
         .hero_button {
            @include button-style();
@@ -206,8 +240,10 @@ main {
 .fonctionnement {
     background-color: white;
     width: 100%;
+    margin: 50px 0px;
     @include flexbox-center;
     flex-direction: column;
+    
 
     .fonction_container {
         width: 95%;
@@ -215,7 +251,7 @@ main {
         flex-direction: column;
         
         .fonction_title {
-            margin-bottom: 30px;
+            margin: 0px;
             padding: 20px;
         }
 
@@ -223,8 +259,7 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: center;
-
-            @media (min-width:800px) {
+            @include desktop {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -234,7 +269,7 @@ main {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                width: 325px;
+                width: 320px;
                 height: 70px;
                 margin: 10px 20px;
                 border-radius: 20px;
@@ -268,6 +303,7 @@ main {
 .restaurants {
     background-color: #f6f6f6;
     width: 100%;
+    margin: 50px 0px;
 
     .restau_container {
         display: flex;
@@ -276,19 +312,20 @@ main {
         align-items: flex-start;
         padding: 20px;
 
-        .restau_cards {
-            @include flexbox-center;
-            flex-direction: column;
+        .restau_title {
+            margin: 0px;
+            padding: 20px;
+        }
 
-            @media (min-width: 768px) {
+        .restau_cards {
+            flex-direction: column;
+            @include flexbox-center;
+            
+            @include desktop() {
                 width: 100%;
                 height: 100%;
-                display: flex;
                 flex-direction: row;
-                flex-wrap:wrap;
-                justify-content: space-around;
-                align-items: center;
-                
+                flex-wrap: wrap;
             }
         }
     }
@@ -303,6 +340,10 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include desktop() {
+        margin-left: 100px;
+    }
     
     .restau_img {
         width: 100%;

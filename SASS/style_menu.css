@@ -179,7 +179,7 @@ section .menu .menu_title h2 {
 
 @media screen and (min-width: 768px) {
   .menu_blocs {
-    width: 100%;
+    max-width: 1200px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -450,8 +450,8 @@ section .menu .menu_title h2 {
             transform: scaleX(0);
   }
   100% {
-    -webkit-transform: scaleX(-100px);
-            transform: scaleX(-100px);
+    -webkit-transform: scaleX(100px);
+            transform: scaleX(100px);
   }
 }
 
@@ -461,8 +461,8 @@ section .menu .menu_title h2 {
             transform: scaleX(0);
   }
   100% {
-    -webkit-transform: scaleX(-100px);
-            transform: scaleX(-100px);
+    -webkit-transform: scaleX(100px);
+            transform: scaleX(100px);
   }
 }
 

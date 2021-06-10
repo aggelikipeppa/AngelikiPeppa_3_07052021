@@ -225,6 +225,12 @@ main {
   padding: 50px 0;
 }
 
+@media screen and (min-width: 1280px) {
+  .hero .hero_container {
+    padding-bottom: 0;
+  }
+}
+
 .hero .hero_container .hero_title {
   text-align: center;
   max-width: 250px;
@@ -238,6 +244,13 @@ main {
   max-width: 350px;
   padding: 25px 20px 35px 20px;
   font-size: 1.1em;
+}
+
+@media screen and (min-width: 1280px) {
+  .hero .hero_container .hero_text {
+    padding: 0;
+    margin-bottom: 0;
+  }
 }
 
 .hero .hero_container .hero_button {
@@ -267,12 +280,13 @@ main {
   cursor: pointer;
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .fonctionnement {
   background-color: white;
   width: 100%;
+  margin: 50px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -300,7 +314,7 @@ main {
 }
 
 .fonctionnement .fonction_container .fonction_title {
-  margin-bottom: 30px;
+  margin: 0px;
   padding: 20px;
 }
 
@@ -317,7 +331,7 @@ main {
           justify-content: center;
 }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 1280px) {
   .fonctionnement .fonction_container .fonction_steps {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -343,7 +357,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 325px;
+  width: 320px;
   height: 70px;
   margin: 10px 20px;
   border-radius: 20px;
@@ -362,7 +376,7 @@ main {
   cursor: pointer;
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .fonctionnement .fonction_container .fonction_steps .fonction_btn .fonction_number {
@@ -383,6 +397,7 @@ main {
 .restaurants {
   background-color: #f6f6f6;
   width: 100%;
+  margin: 50px 0px;
 }
 
 .restaurants .restau_container {
@@ -402,7 +417,16 @@ main {
   padding: 20px;
 }
 
+.restaurants .restau_container .restau_title {
+  margin: 0px;
+  padding: 20px;
+}
+
 .restaurants .restau_container .restau_cards {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,30 +436,18 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 1280px) {
   .restaurants .restau_container .restau_cards {
     width: 100%;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -456,6 +468,12 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (min-width: 1280px) {
+  .restau_card {
+    margin-left: 100px;
+  }
 }
 
 .restau_card .restau_img {

@@ -25,8 +25,6 @@
     opacity: 0.8;
 }
 
-
-
 $font_title: 'Shrikhand';
 $font_text: 'Roboto', sans-serif;
 $color-primary: #9356DC;
@@ -152,24 +150,21 @@ section {
         stroke: transparent; 
     }
 
-
     100% {
         fill: url(#gradient_Color);
         stroke: transparent;
     }
 }
 
-
 .menu_blocs {
     @include flexbox-center();
     flex-direction: column;
 
     @media screen and (min-width: 768px) {
-        width: 100%;
+        max-width: 1200px;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-    
     }
 
     .menu_bloc {
@@ -283,7 +278,6 @@ section {
     .menu_dishes_and_prices {
         width: 100%;
         display: flex;
-    
         justify-content: space-between;
         align-items: center;
 
@@ -360,7 +354,7 @@ section {
 }
 100% {
     
-    transform: scaleX(-100px);
+    transform: scaleX(100px);
 }
 }
 

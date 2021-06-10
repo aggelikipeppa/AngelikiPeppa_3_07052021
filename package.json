@@ -4,8 +4,10 @@
   "description": "PROJET_3-OhMyFooD",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./SASS/main.scss:SASS/main.css"
+    "sass": "sass --watch ./SASS/main.scss:SASS/main.css",
+    "prefix": "postcss ./SASS/main.scss --use autoprefixer -d ./SASS/prefixed/"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "browserslist": "last 4 versions"
 }
