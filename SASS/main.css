@@ -265,22 +265,17 @@ main {
   font-size: 1em;
   padding: 0px 20px;
   margin: 50px 0px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
-  transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
-  opacity: 1;
   width: 220px;
   height: 50px;
 }
 
 .hero .hero_container .hero_button:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
-  opacity: 0.3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0.8;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
 }
 
 .fonctionnement {
@@ -347,6 +342,7 @@ main {
 }
 
 .fonctionnement .fonction_container .fonction_steps .fonction_btn {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -364,19 +360,16 @@ main {
   background-color: #f6f6f6;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
-  transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
 }
 
 .fonctionnement .fonction_container .fonction_steps .fonction_btn:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
-  opacity: 0.3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0.8;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+  background: white;
 }
 
 .fonctionnement .fonction_container .fonction_steps .fonction_btn .fonction_number {
@@ -433,6 +426,18 @@ main {
   padding: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .restaurants .restau_container .restau_cards {
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .restaurants .restau_container .restau_cards {
     width: 100%;
@@ -443,7 +448,6 @@ main {
         grid-template-rows: 1fr 1fr;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
   }
 }
 
@@ -600,7 +604,7 @@ footer .footer_bloc {
 
 @media screen and (min-width: 1280px) {
   footer .footer_bloc {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 
@@ -623,6 +627,12 @@ footer .footer_bloc .footer_links {
 }
 
 @media screen and (min-width: 768px) {
+  footer .footer_bloc .footer_links {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
   footer .footer_bloc .footer_links {
     width: 100%;
     -webkit-box-orient: horizontal;
