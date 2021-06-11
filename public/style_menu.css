@@ -101,11 +101,11 @@ section .menu .menu_title h2 {
     stroke: black;
   }
   50% {
-    fill: url(#gradient_Color);
+    fill: url(#heart_color);
     stroke: transparent;
   }
   100% {
-    fill: url(#gradient_Color);
+    fill: url(#heart_color);
     stroke: transparent;
   }
 }
@@ -119,7 +119,7 @@ section .menu .menu_title h2 {
   .menu_blocs {
     width: 100%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
 }
@@ -213,6 +213,11 @@ section .menu .menu_title h2 {
   border-radius: 15px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
+@media screen and (min-width: 1280px) {
+  .menu_container {
+    width: auto;
+  }
+}
 .menu_container :hover .menu_price {
   padding-right: 70px;
   transition: 0.5s ease;
@@ -221,7 +226,7 @@ section .menu .menu_title h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: right;
+  transform: rotate(360deg);
   animation: slide-left 0.5s ease;
 }
 .menu_container .menu_dishes_and_prices {
@@ -231,9 +236,8 @@ section .menu .menu_title h2 {
   align-items: center;
 }
 .menu_container .menu_dishes_and_prices .menu_dishe {
-  margin: 10px;
+  margin: 20px;
   font-size: 1em;
-  margin-left: 20px;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -347,6 +351,11 @@ footer .footer_bloc .footer_logo {
   padding: 15px 0;
   color: white;
 }
+@media screen and (min-width: 768px) {
+  footer .footer_bloc .footer_logo {
+    text-align: center;
+  }
+}
 footer .footer_bloc .footer_links {
   display: flex;
   flex-direction: column;
@@ -354,7 +363,7 @@ footer .footer_bloc .footer_links {
 }
 @media screen and (min-width: 768px) {
   footer .footer_bloc .footer_links {
-    width: 100%;
+    align-items: center;
   }
 }
 @media screen and (min-width: 1280px) {

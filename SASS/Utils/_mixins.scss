@@ -1,0 +1,35 @@
+@mixin flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-style {
+    background-image: $gradient;
+    color: white;
+    border-radius: 200px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    text-align: center;
+    display:inline-block;
+    font-size: 1em;
+    padding: 0px 20px;
+    margin: 50px 0px;
+}
+
+@mixin button-hover {
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.8;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+}
+
+@mixin tablet {
+    @media screen and (min-width:map-get($breakpoints, tablet)){
+      @content;
+    }
+  }
+  @mixin desktop {
+    @media screen and (min-width:map-get($breakpoints, desktop)){
+      @content;
+    }
+  }

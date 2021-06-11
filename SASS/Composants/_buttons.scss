@@ -1,0 +1,29 @@
+.hero_button {
+    @include button-style();
+     width: 220px;
+     height: 50px;
+
+     &:hover {
+         @include button-hover;
+     }
+ }
+
+
+.heart_button {
+    position:relative;
+    width: 30px;
+
+    .icon_heart {
+        width: 30px;
+
+        path {
+            fill: white;
+            stroke: black;
+            stroke-width: 30px;
+        }
+        
+        & :hover {
+            animation: heart 0.7s linear forwards;
+        }
+    }
+}

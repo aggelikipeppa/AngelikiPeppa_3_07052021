@@ -1,0 +1,18 @@
+.location_and_hero {
+    width: 100%;
+}
+
+.location {
+    color: #3d3636;
+    background-color: #f3f3f3;
+    @include flexbox-center;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+
+    .location_text {
+        margin-left: 13px;
+        font-weight: 400;
+        color: #7E7E7E;
+    }
+}
