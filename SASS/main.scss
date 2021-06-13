@@ -1,19 +1,12 @@
 @import "./Utils/mixins", "./Utils/variables", "./Utils/keyframes";
 @import "./Base/reset";
-@import "./Layout/loader", "./Layout/header", "./Layout/footer";
+@import "./Layout/loader", "./Layout/header", "./Layout/footer", "./Layout/partie-main";
 @import "./Composants/fonctionnement", "./Composants/buttons", "./Composants/hero", "./Composants/restaurants", "./Composants/location";
 
 
 
 
 
-main {
-    margin: 0px;
-    padding: 0px;
-    @include flexbox-center;
-    flex-direction: column;
-    background-color: white;
-}
 
 
 
