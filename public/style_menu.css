@@ -455,8 +455,8 @@ section .menu .menu_title h2 {
             transform: scaleX(0);
   }
   100% {
-    -webkit-transform: scaleX(100px);
-            transform: scaleX(100px);
+    -webkit-transform: scaleX(-50px);
+            transform: scaleX(-50px);
   }
 }
 
@@ -466,8 +466,8 @@ section .menu .menu_title h2 {
             transform: scaleX(0);
   }
   100% {
-    -webkit-transform: scaleX(100px);
-            transform: scaleX(100px);
+    -webkit-transform: scaleX(-50px);
+            transform: scaleX(-50px);
   }
 }
 

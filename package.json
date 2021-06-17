@@ -4,9 +4,11 @@
   "description": "PROJET_3-OhMyFooD",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./public/style_menu.scss:public/style_menu.css"
-    
+    "sass": "sass --watch ./SASS/style_menu.scss:public/css/style_menu.css",
+    "prefix": "postcss ./public/css/style_menu.css --use autoprefixer -d ./public/css/prefixed/"
+
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Angeliki Peppa",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
 }
