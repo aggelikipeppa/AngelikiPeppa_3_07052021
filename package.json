@@ -4,7 +4,7 @@
   "description": "PROJET_3-OhMyFooD",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./SASS/Pages/style_menu.scss:public/css/style_menu.css",
+    "sass": "sass --watch ./SASS/style_menu.scss:public/css/style_menu.css",
     "prefix": "postcss ./public/css/style_menu.css --use autoprefixer -d ./public/css/prefixed/"
 
   },
