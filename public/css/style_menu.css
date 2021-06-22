@@ -3,6 +3,7 @@ body {
   margin: 0px;
   background-color: white;
   width: auto;
+  overflow-x: hidden;
 }
 
 * a {
@@ -71,6 +72,7 @@ main .img .image_restau {
 }
 
 section {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,6 +88,7 @@ section .menu {
   margin-top: -50px;
   padding: 0 20px;
   width: 100%;
+  max-width: 1440px;
   border-radius: 30px 30px 0 0;
   background-color: #F6F6F6;
 }
@@ -187,6 +190,7 @@ section .menu .menu_title h2 {
         grid-template-rows: 1fr;
     -webkit-column-gap: 15px;
             column-gap: 15px;
+    justify-items: justify;
   }
 }
 
