@@ -177,6 +177,20 @@ section .menu .menu_title h2 {
           flex-direction: column;
 }
 
+@media screen and (min-width: 1280px) {
+  .menu_blocs {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .menu_blocs .menu_bloc {
   display: -webkit-box;
   display: -ms-flexbox;
