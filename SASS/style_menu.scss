@@ -27,7 +27,6 @@
 $breakpoints: (
     tablet: 768px,
     desktop: 1280px,
-    large: 1600px,
 );
 
 @mixin tablet {
@@ -54,7 +53,6 @@ body {
    margin: 0px;
    background-color: white;
    width: auto;
-   overflow-x:hidden;
 }
 
 * a {
@@ -113,14 +111,12 @@ main {
 }
 
 section {
-    width: 100%;
     @include flexbox-center();
 
     .menu {
         margin-top: -50px;
         padding: 0 20px;
         width: 100%;
-        max-width: 1440px;
         border-radius: 30px 30px 0 0;
         background-color: #F6F6F6;
 
@@ -178,16 +174,13 @@ section {
 .menu_blocs {
     @include flexbox-center();
     flex-direction: column;
-
     @include desktop {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
-        column-gap: 15px;
-        justify-items: justify;
+        column-gap: 15px;   
     }
-
-
+    
     .menu_bloc {
         display: flex;
         flex-direction: column;
@@ -282,10 +275,6 @@ section {
     background-color: white;
     border-radius: 15px;
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
-
-    @include desktop(){
-        width: 450px;
-    }
 
 
     & :hover .menu_price {
