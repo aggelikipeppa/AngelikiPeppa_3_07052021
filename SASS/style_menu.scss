@@ -325,6 +325,10 @@ section {
     font-weight: bold;
     padding-left: 7px;
     margin-right: 10px;
+
+    @include desktop() {
+        margin-right: 30px;
+    }
 }
 
 .validation_box {

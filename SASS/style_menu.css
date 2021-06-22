@@ -385,6 +385,12 @@ section .menu .menu_title h2 {
   margin-right: 10px;
 }
 
+@media screen and (min-width: 1280px) {
+  .menu_price {
+    margin-right: 30px;
+  }
+}
+
 .validation_box {
   display: none;
   position: absolute;
