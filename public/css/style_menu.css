@@ -30,7 +30,7 @@ header .header_menu {
           align-items: center;
   width: 100%;
   height: 80px;
-  background-color: white;
+  background-color: red;
 }
 
 header .header_menu .header__fleche-back {
@@ -354,6 +354,7 @@ section .menu .menu_title h2 {
 }
 
 .menu_container .menu_dishes_and_prices {
+  position: relative;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
