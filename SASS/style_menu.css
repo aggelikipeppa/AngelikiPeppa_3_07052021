@@ -348,7 +348,6 @@ section .menu .menu_title h2 {
 }
 
 .menu_container .menu_dishes_and_prices {
-  position: relative;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
