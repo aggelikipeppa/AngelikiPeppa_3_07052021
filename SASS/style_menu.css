@@ -324,7 +324,7 @@ section .menu .menu_title h2 {
 
 @media screen and (min-width: 1280px) {
   .menu_container {
-    width: 550px;
+    width: 100%;
   }
 }
 
@@ -365,7 +365,7 @@ section .menu .menu_title h2 {
 
 .menu_container .menu_dishes_and_prices .menu_dishe {
   margin: 20px;
-  font-size: 0.8em;
+  font-size: 1em;
   white-space: nowrap;
   overflow: hidden;
 }
