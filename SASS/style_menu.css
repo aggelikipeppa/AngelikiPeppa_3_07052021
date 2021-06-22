@@ -179,7 +179,7 @@ section .menu .menu_title h2 {
 
 @media screen and (min-width: 1280px) {
   .menu_blocs {
-    width: 100%;
+    width: auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
