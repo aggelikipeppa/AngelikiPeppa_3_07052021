@@ -177,9 +177,9 @@ section {
     flex-direction: column;
 
     @include desktop {
-        flex-direction: row;
-        justify-content:space-around;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
     }
 
     
