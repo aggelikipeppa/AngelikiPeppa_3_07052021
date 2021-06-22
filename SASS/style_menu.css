@@ -316,7 +316,7 @@ section .menu .menu_title h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 350px;
   height: 70px;
   margin-bottom: 15px;
   background-color: white;
@@ -349,6 +349,7 @@ section .menu .menu_title h2 {
 
 .menu_container .menu_dishes_and_prices {
   position: relative;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
