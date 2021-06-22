@@ -177,22 +177,6 @@ section .menu .menu_title h2 {
           flex-direction: column;
 }
 
-@media screen and (min-width: 1280px) {
-  .menu_blocs {
-    width: auto;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
 .menu_blocs .menu_bloc {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -323,12 +307,6 @@ section .menu .menu_title h2 {
   border-radius: 15px;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
-}
-
-@media screen and (min-width: 1280px) {
-  .menu_container {
-    width: 500px;
-  }
 }
 
 .menu_container :hover .menu_price {
