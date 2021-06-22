@@ -183,7 +183,6 @@ section {
         column-gap: 15px;
     }
 
-    
 
     .menu_bloc {
         display: flex;
@@ -279,6 +278,10 @@ section {
     background-color: white;
     border-radius: 15px;
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+
+    @include desktop(){
+        width: 100%;
+    }
 
 
     & :hover .menu_price {
