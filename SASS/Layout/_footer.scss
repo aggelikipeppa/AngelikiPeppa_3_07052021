@@ -1,18 +1,20 @@
-footer {
-    width: 100%;
-    background-color: #353535;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.footer {
     color: white;
+    width: 100%;
+    
+    @include flexbox-center();
+    background-color: #353535;
 
     .footer_bloc {
-        display: inline;
         padding: 0 40px;
         width: 100%;
         max-width: 1200px;
+        @include tablet {
+            margin-bottom: 15px;
+        }
         @include desktop() {
-            margin-bottom: 30px;
+            margin-bottom: 15px;
+
         }
         
         .footer_logo {
@@ -28,15 +30,20 @@ footer {
         .footer_links {
             display: flex; 
             flex-direction: column;
-            width: auto;
+            width: 100%;
             @include tablet() {
-                align-items: center;
-            }
-            @include desktop() {
-                width: 100%;
+                display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                max-width: 900px;
+            }
+            @include desktop() {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 900px;
             }
 
             .footer_link {
